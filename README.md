@@ -223,6 +223,35 @@ docker run -p 8080:8080 \
 ![OTP Verification](screenshots/otpsentpagebasedonemailpage.png)
 
 ---
+### 🚚 Delivery Agent Login
+
+![Delivery Agent Login](screenshots/deliveryagentloginpage.png)
+
+---
+
+### 🚛 Manage Delivery Agents
+
+![Manage Delivery Agents](screenshots/adminviewdeliveryagentpage.png)
+
+---
+
+### 📧 OTP Sent to Email
+
+![OTP Sent to Email](screenshots/otpsenttouseremail.png)
+
+---
+
+### 💬 Payment Success Message
+
+![Payment Success Message](screenshots/paymentsuccessmessagetouser.png)
+
+---
+
+### 🎉 Payment Success Page
+
+![Payment Success Page](screenshots/paymenysuccesspage.png)
+
+---
 
 ## 📄 License
 
