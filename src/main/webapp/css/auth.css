@@ -1,0 +1,113 @@
+/* ==========================================================================
+   auth.css — Login / Register / Role select / OTP / Forgot-password
+   Split-panel layout: dark green brand panel (left) + white form (right)
+   ========================================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-brand-panel {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.auth-brand-panel::before {
+  content: '';
+  position: absolute;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(247,201,72,0.16) 0%, transparent 70%);
+  bottom: -180px; left: -120px;
+}
+.auth-back-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(253,250,243,0.12);
+  font-size: 18px;
+  width: fit-content;
+}
+.auth-brand-content { position: relative; z-index: 2; }
+.auth-brand-content .navbar-brand { color: var(--color-text-inverse); font-size: 26px; margin-bottom: 30px; }
+.auth-brand-content .navbar-brand .logo-badge { background: var(--color-accent); color: var(--color-primary-dark); }
+.auth-brand-content h1 { font-size: 40px; margin-bottom: 16px; max-width: 420px; }
+.auth-brand-content p { color: rgba(253,250,243,0.7); max-width: 380px; font-size: 15px; }
+.auth-brand-footer { position: relative; z-index: 2; font-size: 13px; color: rgba(253,250,243,0.5); }
+
+.auth-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: var(--color-white);
+}
+.auth-form-box { width: 100%; max-width: 400px; }
+.auth-form-box h2 { font-size: 30px; margin-bottom: 8px; }
+.auth-form-box .auth-subtitle { color: var(--color-text-muted); font-size: 14.5px; margin-bottom: 30px; }
+
+.auth-row-between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; font-size: 13.5px; }
+.auth-checkbox { display: flex; align-items: center; gap: 8px; }
+.auth-checkbox input { width: 16px; height: 16px; accent-color: var(--color-primary); }
+.auth-link { color: var(--color-primary); font-weight: 600; }
+.auth-link:hover { text-decoration: underline; }
+
+.auth-terms { font-size: 12.5px; color: var(--color-text-muted); text-align: center; margin-top: 18px; line-height: 1.6; }
+.auth-switch { text-align: center; margin-top: 20px; font-size: 14px; color: var(--color-text-muted); }
+
+/* Role selection cards */
+.role-select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.role-card {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+.role-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-6px); }
+.role-card .role-icon {
+  width: 68px; height: 68px; border-radius: 50%;
+  background: var(--color-mint);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; margin: 0 auto 18px;
+}
+.role-card h3 { font-size: 19px; margin-bottom: 8px; }
+.role-card p { font-size: 13.5px; color: var(--color-text-muted); margin-bottom: 20px; }
+.role-select-page { min-height: 100vh; background: var(--color-mint); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; }
+.role-select-page .page-heading { text-align: center; margin-bottom: 44px; }
+.role-select-page .page-heading h1 { font-size: 34px; margin-bottom: 10px; }
+.role-select-page .page-heading p { color: var(--color-text-muted); }
+
+/* OTP input boxes */
+.otp-input-row { display: flex; gap: 10px; justify-content: center; margin-bottom: 22px; }
+.otp-box {
+  width: 50px; height: 58px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.otp-box:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(22,58,46,0.08); }
+.otp-timer { text-align: center; font-size: 13.5px; color: var(--color-text-muted); margin-bottom: 22px; }
+.otp-timer span { font-weight: 700; color: var(--color-primary); }
+.resend-btn { background: none; color: var(--color-primary); font-weight: 700; font-size: 13.5px; }
+.resend-btn:disabled { color: var(--color-text-muted); cursor: not-allowed; }
+
+@media (max-width: 900px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-brand-panel { display: none; }
+  .role-select-grid { grid-template-columns: 1fr; }
+}
