@@ -16,8 +16,8 @@
 //
 //    private static final String DB_URL =
 //            "jdbc:mysql://localhost:3306/tummyfull?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-//    private static final String DB_USER = "root";
-//    private static final String DB_PASSWORD = "Akhila@123";
+//    private static final String DB_USER = "database username";
+//    private static final String DB_PASSWORD = "Database password";
 //
 //    static {
 //        try {
@@ -83,8 +83,8 @@ public class DBConnectionUtil {
     // committing real credentials to source control.
 	private static final String DB_URL = System.getenv().getOrDefault(
 	        "DB_URL", "jdbc:mysql://localhost:3306/tummyfull?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true");
-    private static final String DB_USER = System.getenv().getOrDefault("DB_USER", "root");
-    private static final String DB_PASSWORD = System.getenv().getOrDefault("DB_PASSWORD", "Akhila@123");
+    private static final String DB_USER = System.getenv().getOrDefault("DB_USER", "database username");
+    private static final String DB_PASSWORD = System.getenv().getOrDefault("DB_PASSWORD", "Database password");
 
     static {
         try {
