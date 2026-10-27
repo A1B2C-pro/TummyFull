@@ -34,8 +34,8 @@ import java.util.Properties;
 public class MailUtil {
 
     // ---- Update these with your own Gmail sender credentials ----
-    private static final String SENDER_EMAIL = "gakhilasajjan123456@gmail.com";
-    private static final String SENDER_APP_PASSWORD = "hldksvmvecnuoyig";
+    private static final String SENDER_EMAIL = "your email";
+    private static final String SENDER_APP_PASSWORD = "you app password";
     // ---------------------------------------------------------------
 
     private MailUtil() {}
