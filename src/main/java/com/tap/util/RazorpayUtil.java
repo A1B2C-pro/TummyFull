@@ -30,8 +30,8 @@ import java.util.regex.Pattern;
 public class RazorpayUtil {
 
     // ---- Update these with your own Razorpay TEST MODE keys ----
-	private static final String KEY_ID     = "rzp_test_TAyaHHEQHxqElW";
-	private static final String KEY_SECRET = "Hm5FaMvkrwR6ejQLWnBDtZpe";
+	private static final String KEY_ID     = "your test keyid";
+	private static final String KEY_SECRET = "your secret key";
     // ---------------------------------------------------------------
 
     private static final String ORDERS_URL = "https://api.razorpay.com/v1/orders";
